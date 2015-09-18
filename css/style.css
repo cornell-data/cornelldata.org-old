@@ -1,0 +1,113 @@
+/* Custom CSS */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;
+}
+
+.container {
+	margin: 0 6%;
+}
+
+.logo {
+	line-height:50px;
+}
+
+.logo a{
+	color:black;
+}
+
+.logo h1 {
+	float:left;
+	vertical-align: middle;
+}
+
+.logo h3 {
+	float:left;
+	margin-top: 30px;
+}
+
+.navbar-datasets a {
+	float:right;
+	padding-top: 0px;
+	color:black;
+	margin-left:5%;
+}
+
+.logo a:hover {
+	color: orange;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  float:left;
+  /* Set the fixed height of the footer here */
+  height: 110px;
+  background-color: #f5f5f5;
+}
+
+.footer img, h5 {
+	float:left;
+	margin-right: 15px;
+	color:black;	
+}
+
+.footer h5:hover {
+	color:orange;
+}
+
+.method {
+	padding-bottom: 20px;
+}
+
+.content {
+	margin: 0 7%;
+}
+
+.download-button {
+	background-color: #555;
+	color:white;
+	border: 1px solid black;
+	margin-right:15px;
+  padding: 0.5rem;
+}
+
+.download-button:hover {
+	background-color: #333;
+	color:white;
+  text-decoration: none;
+}
+
+.field-list {
+	padding-left: 25px;
+}
+
+.method-top {
+  margin-bottom: 20px;
+}
+
+kbd {
+  background: #ddd;
+  border: #a8a8a8;
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border: 2px solid #333;
+}
+
+tr {
+  border: 1px solid #d8d8d8;
+  border-spacing:1px;
+}
+td {
+  padding: 5px;
+}

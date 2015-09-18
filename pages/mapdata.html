@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cornell Open Data Initiative</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default ">
+      <div class="container">
+        <div class="logo">
+        	<a href="/"><h1>CODI:</h1><h3>&nbsp;Cornell Open Data Initiative</h3></a>
+        	<div class="navbar-datasets">
+<!--         		<a href="eventdata.html"><h3>Event Data</h3></a>
+        		<a href="tcatdata.html"><h3>TCAT Data</h3></a>
+ -->        		<a href="mapdata.html"><h3>Map Data</h3></a>
+        	</div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+    	<h1>Cornell Map Data</h1>
+      <p>Please note: while the API is currently accessible via HTTP, please use the HTTPS endpoint, as the HTTP one will be disabled when the beta period ends.</p>
+    	<h2>API Options</h2>
+      <table>
+        <tr>
+          <td>format</td>
+          <td>Can be "html", "xml" or "json"</td>
+        </tr>
+        <tr>
+          <td>sort</td>
+          <td>Field to sort by</td>
+        </tr>
+        <tr>
+          <td>sort_dir</td>
+          <td>Can be "asc" or "dsc"</td>
+        </tr>
+        <tr>
+          <td>{field name}</td>
+          <td>Using any of the dataset's fields will filter by the value provided. Does an exact match, not partial search</td>
+        </tr>
+        <thead>
+          <td>Option Name</td>
+          <td>Notes</td>
+        </thead>
+      </table>
+
+
+      <!--Bike Racks-->
+      <div class="method">
+        <div class="method-top">
+          <h2>bikeracks</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bikeracks/bikeracks.csv" download="bikeracks.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bikeracks/bikeracks.json" download="bikeracks.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bikeracks/bikeracks.kml" download="bikeracks.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bikeracks/bikeracks.geojson" download="bikeracks.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/bikeracks"><kbd>https://cornelldata.org/api/v0/map-data/bikeracks</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Bluelights-->
+      <div class="method">
+        <div class="method-top">
+          <h2>bluelights</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bluelights/bluelights.csv" download="bluelights.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bluelights/bluelights.json" download="bluelights.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bluelights/bluelights.kml" download="bluelights.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/bluelights/bluelights.geojson" download="bluelights.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/bluelights"><kbd>https://cornelldata.org/api/v0/map-data/bluelights</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Buildings-->
+      <div class="method">
+        <div class="method-top">
+          <h2>buildings</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/buildings/buildings.csv" download="buildings.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/buildings/buildings.json" download="buildings.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/buildings/buildings.kml" download="buildings.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/buildings/buildings.geojson" download="buildings.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/buildings"><kbd>https://cornelldata.org/api/v0/map-data/buildings</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Category</strong></li>
+            <li><strong>ImageURL</strong></li>
+            <li><strong>Address</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+            <li><strong>Notes</strong></li>
+            <li><strong>AKA</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Campus to Campus-->
+      <div class="method">
+        <div class="method-top">
+          <h2>campustocampus</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/campustocampus/campustocampus.csv" download="campustocampus.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/campustocampus/campustocampus.json" download="campustocampus.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/campustocampus/campustocampus.kml" download="campustocampus.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/campustocampus/campustocampus.geojson" download="campustocampus.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/campustocampus"><kbd>https://cornelldata.org/api/v0/map-data/campustocampus</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Car Share-->
+      <div class="method">
+        <div class="method-top">
+          <h2>carshare</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/carshare/carshare.csv" download="carshare.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/carshare/carshare.json" download="carshare.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/carshare/carshare.kml" download="carshare.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/carshare/carshare.geojson" download="carshare.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/carshare"><kbd>https://cornelldata.org/api/v0/map-data/carshare</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Diaper Changing Stations-->
+      <div class="method">
+        <div class="method-top">
+          <h2>diaperchangingstations</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/diaperchangingstations/diaperchangingstations.csv" download="diaperchangingstations.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/diaperchangingstations/diaperchangingstations.json" download="diaperchangingstations.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/diaperchangingstations/diaperchangingstations.kml" download="diaperchangingstations.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/diaperchangingstations/diaperchangingstations.geojson" download="diaperchangingstations.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/diaperchangingstations"><kbd>https://cornelldata.org/api/v0/map-data/diaperchangingstations</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Info Booths-->
+      <div class="method">
+        <div class="method-top">
+          <h2>infobooths</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/infobooths/infobooths.csv" download="infobooths.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/infobooths/infobooths.json" download="infobooths.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/infobooths/infobooths.kml" download="infobooths.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/infobooths/infobooths.geojson" download="infobooths.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/infobooths"><kbd>https://cornelldata.org/api/v0/map-data/infobooths</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Lactation Rooms-->
+      <div class="method">
+        <div class="method-top">
+          <h2>lactationrooms</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/lactationrooms/lactationrooms.csv" download="lactationrooms.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/lactationrooms/lactationrooms.json" download="lactationrooms.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/lactationrooms/lactationrooms.kml" download="lactationrooms.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/lactationrooms/lactationrooms.geojson" download="lactationrooms.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/lactationrooms"><kbd>https://cornelldata.org/api/v0/map-data/lactationrooms</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Parking-->
+      <div class="method">
+        <div class="method-top">
+          <h2>parking</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parking/parking.csv" download="parking.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parking/parking.json" download="parking.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parking/parking.kml" download="parking.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parking/parking.geojson" download="parking.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/parking"><kbd>https://cornelldata.org/api/v0/map-data/parking</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Address</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+            <li><strong>Notes</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Park Mobile-->
+      <div class="method">
+        <div class="method-top">
+          <h2>parkmobile</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parkmobile/parkmobile.csv" download="parkmobile.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parkmobile/parkmobile.json" download="parkmobile.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parkmobile/parkmobile.kml" download="parkmobile.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/parkmobile/parkmobile.geojson" download="parkmobile.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/parkmobile"><kbd>https://cornelldata.org/api/v0/map-data/parkmobile</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>ID</strong></li>
+            <li><strong>Name</strong></li>
+            <li><strong>Address</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+            <li><strong>Notes</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Virtual Tour-->
+      <div class="method">
+        <div class="method-top">
+          <h2>virtualtour</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/virtualtour/virtualtour.csv" download="virtualtour.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/virtualtour/virtualtour.json" download="virtualtour.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/virtualtour/virtualtour.kml" download="virtualtour.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/map-data/master/virtualtour/virtualtour.geojson" download="virtualtour.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/map-data/virtualtour"><kbd>https://cornelldata.org/api/v0/map-data/virtualtour</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>ID</strong></li>
+            <li><strong>Name</strong></li>
+            <li><strong>Description</strong></li>
+            <li><strong>PanDegrees</strong></li>
+            <li><strong>TiltDegrees</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+            <li><strong>View</strong></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+      	<div class="footer-contents">
+      		<h3>Brought to you by:</h3>
+        	<a href="http://cusd.cornell.edu/" target="_blank"><img src="/img/CUSDLogo.jpg" height="30px">
+        	<h5>Cornell University Sustainable Design</h5></a>
+        	<a href="http://www.cuappdev.org/home" target="_blank"><img src="/img/cuappdevlogo.png" height="30px">
+        	<h5>CU App Development</h5></a>
+      	</div>
+      </div>
+    </footer>
+</body>
+</html>
