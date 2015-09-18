@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cornell Open Data Initiative</title>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+    
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default ">
+      <div class="container">
+        <div class="logo">
+          <a href="/"><h1>CODI:</h1><h3>&nbsp;Cornell Open Data Initiative</h3></a>
+          <div class="navbar-datasets">
+            <!-- <a href="eventdata.html"><h3>Event Data</h3></a> -->
+            <a href="tcatdata.html"><h3>TCAT Data</h3></a>
+            <a href="mapdata.html"><h3>Map Data</h3></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <h1>TCAT Data</h1>
+      <p>Please note: while the API is currently accessible via HTTP, please use the HTTPS endpoint, as the HTTP one will be disabled when the beta period ends.</p>
+      <h2>API Options</h2>
+      <table>
+        <tr>
+          <td>format</td>
+          <td>Can be "html", "xml" or "json"</td>
+        </tr>
+        <tr>
+          <td>sort</td>
+          <td>Field to sort by</td>
+        </tr>
+        <tr>
+          <td>sort_dir</td>
+          <td>Can be "asc" or "dsc"</td>
+        </tr>
+        <tr>
+          <td>{field name}</td>
+          <td>Using any of the dataset's fields will filter by the value provided. Does an exact match, not partial search</td>
+        </tr>
+        <thead>
+          <td>Option Name</td>
+          <td>Notes</td>
+        </thead>
+      </table>
+
+
+      <!--Bike Racks-->
+      <div class="method">
+        <div class="method-top">
+          <h2>route-schedules</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/route-schedules/route-schedules.csv" download="route-schedules.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/route-schedules/route-schedules.json" download="route-schedules.json">Download JSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/TCAT-data/route-schedules"><kbd>https://cornelldata.org/api/v0/TCAT-data/route-schedules</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Route</strong></li>
+            <li><strong>RouteInstance</strong></li>
+            <li><strong>Day</strong></li>
+            <li><strong>Direction</strong></li>
+            <li><strong>Stop</strong></li>
+            <li><strong>Time</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="method">
+        <div class="method-top">
+          <h2>stop-schedules</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/stop-schedules/stop-schedules.csv" download="stop-schedules.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/stop-schedules/stop-schedules.json" download="stop-schedules.json">Download JSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/TCAT-data/stop-schedules"><kbd>https://cornelldata.org/api/v0/TCAT-data/stop-schedules</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Stop</strong></li>
+            <li><strong>Route</strong></li>
+            <li><strong>Day</strong></li>
+            <li><strong>Direction</strong></li>
+            <li><strong>Time</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Virtual Tour-->
+      <div class="method">
+        <div class="method-top">
+          <h2>stop-locations</h2>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/stop-locations/stop-locations.csv" download="stop-locations.csv">Download CSV</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/stop-locations/stop-locations.json" download="stop-locations.json">Download JSON</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/stop-locations/stop-locations.kml" download="stop-locations.kml">Download KML</a>
+          <a class="download-button" href="https://raw.githubusercontent.com/cornell-data/TCAT-data/master/stop-locations/stop-locations.geojson" download="stop-locations.geojson">Download GeoJSON</a>
+        </div>
+        <p>API Endpoint: <a href="https://cornelldata.org/api/v0/TCAT-data/stop-locations"><kbd>https://cornelldata.org/api/v0/TCAT-data/stop-locations</kbd></a></p>
+        <h3>Fields:</h3>
+        <div class="field-list">
+          <ul>
+            <li><strong>Name</strong></li>
+            <li><strong>Latitude</strong></li>
+            <li><strong>Longitude</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="method">
+        <div class="method-top">
+          <h2>route-locations</h2>
+        </div>
+        <p>KML Files: <a href="https://github.com/cornell-data/TCAT-data/tree/master/route-locations">avialable on GitHub</a></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-contents">
+          <h3>Brought to you by:</h3>
+          <a href="http://cusd.cornell.edu/" target="_blank"><img src="/img/CUSDLogo.jpg" height="30px">
+          <h5>Cornell University Sustainable Design</h5></a>
+          <a href="http://www.cuappdev.org/home" target="_blank"><img src="/img/cuappdevlogo.png" height="30px">
+          <h5>CU App Development</h5></a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
